@@ -6,10 +6,14 @@ Python library to trace path of a particular key inside a nested dict
 Installation
 ============
 
-For stable version - pip install trace-dkey
+For stable version 
+   - pip install trace-dkey
 
-For developement - git clone https://github.com/Agent-Hellboy/trace-dkey
-- cd trace-dkey - python -m venv .venv - source .venv/bin/activate
+For developement 
+   - git clone https://github.com/Agent-Hellboy/trace-dkey
+   - cd trace-dkey 
+   - python -m venv .venv 
+   - source .venv/bin/activate
 
 Example
 =======
