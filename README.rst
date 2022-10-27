@@ -3,6 +3,22 @@ trace-dkey
 
 Python library to trace path of a particular key inside a nested dict
 
+.. image:: https://img.shields.io/pypi/v/trace-dkey
+   :target: https://pypi.python.org/pypi/trace-dkey/
+
+.. image:: https://img.shields.io/pypi/pyversions/trace-dkey.svg
+   :target: https://pypi.python.org/pypi/trace-dkey/
+
+.. image:: https://img.shields.io/pypi/l/trace-dkey.svg
+   :target: https://pypi.python.org/pypi/trace-dkey/
+
+.. image:: https://pepy.tech/badge/trace-dkey
+   :target: https://pepy.tech/project/trace-dkey
+
+.. image:: https://img.shields.io/pypi/format/trace-dkey.svg
+   :target: https://pypi.python.org/pypi/trace-dkey/
+
+
 Installation
 ============
 
