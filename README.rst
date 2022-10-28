@@ -21,6 +21,8 @@ Python library to trace path of a particular key inside a nested dict
 .. image:: https://img.shields.io/pypi/format/trace-dkey.svg
    :target: https://pypi.python.org/pypi/trace-dkey/
 
+.. image:: https://coveralls.io/repos/github/Agent-Hellboy/trace-dkey/badge.svg?branch=main
+   :target: https://coveralls.io/github/Agent-Hellboy/trace-dkey?branch=main
 
 Installation
 ============
