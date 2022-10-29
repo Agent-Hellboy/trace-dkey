@@ -1,5 +1,6 @@
 import _ast
 import ast
+import copy
 from typing import Tuple, List, Any, Dict
 
 
@@ -9,26 +10,45 @@ def __process_tuple(tuple_elts: List) -> Tuple:
         ans.append(elt.value)
     return tuple(ans)
 
+def __trace_key(dict_key: Any, dict_value: Any, key, path = []) -> None:
+    # path stores the path to the current dict position
+    path = copy.deepcopy(path)
+    # paths stores all the paths found inside this dict position
+    paths = []
 
-def __trace_key(dict_key: Any, dict_value: Any, key, response: str) -> None:
     if type(dict_key) == _ast.Constant:
-        if dict_key.value == key:
-            print(f"Found '{key}' at {response[3:]+'-->'+key}")
-        else:
-            response += f"--> {dict_key.value}"
-            if type(dict_value) == _ast.Dict:
-                for i in range(len(dict_value.keys)):
-                    __trace_key(dict_value.keys[i], dict_value.values[i], key, response)
-    if type(dict_key) == _ast.Tuple:
-        tuple_key = __process_tuple(dict_key.elts)
-        response += "-->" + str(tuple_key)
-        if type(dict_value) == _ast.Dict:
+        dict_key_value = dict_key.value
+    elif type(dict_key) == _ast.Tuple:
+        dict_key_value = __process_tuple(dict_key.elts)
+    else:
+        return []
+
+    path.append(dict_key_value)
+
+    if dict_key_value == key:
+        paths = [path]
+    else:
+        if (type(dict_value) == _ast.Dict and len(dict_value.keys) > 0):
             for i in range(len(dict_value.keys)):
-                __trace_key(dict_value.keys[i], dict_value.values[i], key, response)
+                # find array of paths inside the ith branch
+                branch_paths = __trace_key(dict_value.keys[i], dict_value.values[i], key, path)
+
+                paths = [*paths, *branch_paths]
+
+    return paths
 
 
 def trace(dictionary: Dict, key: Any) -> None:
     dict_expr = str(dictionary)
     ast_obj = ast.parse(dict_expr, mode="eval")
+    paths = []
+
     for indx in range(len(ast_obj.body.keys)):
-        __trace_key(ast_obj.body.keys[indx], ast_obj.body.values[indx], key, "")
+        dict_key = ast_obj.body.keys[indx]
+        dict_value = ast_obj.body.values[indx]
+
+        trace_res = __trace_key(dict_key, dict_value, key, [])
+
+        paths = [*paths, *trace_res]
+
+    return paths
