@@ -19,8 +19,11 @@ def __trace_key(dict_key: Any, dict_value: Any, key, response: str) -> None:
             if type(dict_value) == _ast.Dict:
                 for i in range(len(dict_value.keys)):
                     __trace_key(dict_value.keys[i], dict_value.values[i], key, response)
+    
     if type(dict_key) == _ast.Tuple:
         tuple_key = __process_tuple(dict_key.elts)
+        if tuple_key == key:
+            print(f"Found '{str(key)}' at {response[3:]+'-->'+str(key)}")
         response += "-->" + str(tuple_key)
         if type(dict_value) == _ast.Dict:
             for i in range(len(dict_value.keys)):
