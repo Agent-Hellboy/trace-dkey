@@ -1,7 +1,7 @@
 import _ast
 import ast
 import copy
-from typing import Tuple, List, Any, Dict
+from typing import Tuple, List, Any, Dict, Union
 
 
 def __process_tuple(tuple_elts: List) -> Tuple:
@@ -10,7 +10,7 @@ def __process_tuple(tuple_elts: List) -> Tuple:
         ans.append(elt.value)
     return tuple(ans)
 
-def __trace_key(dict_key: Any, dict_value: Any, key, path = []) -> None:
+def __trace_key(dict_key: Any, dict_value: Any, key: Any, path: List[Union[str, Tuple]] = []) -> None:
     # path stores the path to the current dict position
     path = copy.deepcopy(path)
     # paths stores all the paths found inside this dict position

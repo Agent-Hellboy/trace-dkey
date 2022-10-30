@@ -1,5 +1,3 @@
-from contextlib import redirect_stdout
-import io
 import os
 import sys
 
