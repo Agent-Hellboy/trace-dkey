@@ -72,14 +72,15 @@ General Info
           print(dic)
 
 
-
-
    - This is addressing a wide range of question asked on stackoverflow about key inside a nested dict
    - Atleast 13 duplicate questions can be found on stackoverflow 
    - This can be tracked on https://you.com/search?q=find%20key%20in%20nested%20dictionary%20python
    
 
+
 | Someone made a nice comparision of this lib(trace-dkey) with one of the famous lib(yamlpath) which is doing the similar thing 
+
+
 
 .. image:: /images/img.png
    :width: 600
