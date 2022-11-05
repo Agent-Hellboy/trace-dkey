@@ -15,7 +15,7 @@ Python library to trace path of a particular key inside a nested dict
 .. image:: https://img.shields.io/pypi/l/trace-dkey.svg
    :target: https://pypi.python.org/pypi/trace-dkey/
 
-.. image:: https://pepy.tech/badge/trace-dkey
+.. image:: https://pepy.tech/badge/trace-dkeyr
    :target: https://pepy.tech/project/trace-dkey
 
 .. image:: https://img.shields.io/pypi/format/trace-dkey.svg
@@ -53,7 +53,6 @@ Example
 
 General Info
 ============
-
 | The value returned by the `trace` function is an array of paths, where each path is an array of dictionary keys.
 | Because of that, the library can be used in a practical way by taking advantage of this format.
 | In the example below we use the returned path to iterate over the dictionary keys and print the key value:
@@ -70,6 +69,14 @@ General Info
       for key in path:
          dic = dic[key]
       print(dic)
+
+| This is addressing a wide range of question asked on stackoverflow about key inside a nested dict
+| Atleast 13 duplicate questions can be found on stackoverflow 
+| This can be tracked on https://you.com/search?q=find%20key%20in%20nested%20dictionary%20python
+| Someone made a nice comparision of this lib(trace-dkey) with one of the famous lib(yamlpath) which is doing the similar thing 
+
+.. image:: /images/img.png
+   :width: 600
 
 Contributing
 ============
