@@ -53,9 +53,9 @@ Example
 
 General Info
 ============
-| The value returned by the `trace` function is an array of paths, where each path is an array of dictionary keys.
-| Because of that, the library can be used in a practical way by taking advantage of this format.
-| In the example below we use the returned path to iterate over the dictionary keys and print the key value:
+|  - The value returned by the `trace` function is an array of paths, where each path is an array of dictionary keys.
+   - Because of that, the library can be used in a practical way by taking advantage of this format.
+   - In the example below we use the returned path to iterate over the dictionary keys and print the key value:
 
 .. code:: py
 
@@ -70,9 +70,13 @@ General Info
          dic = dic[key]
       print(dic)
 
-| This is addressing a wide range of question asked on stackoverflow about key inside a nested dict
-| Atleast 13 duplicate questions can be found on stackoverflow 
-| This can be tracked on https://you.com/search?q=find%20key%20in%20nested%20dictionary%20python
+
+
+   - This is addressing a wide range of question asked on stackoverflow about key inside a nested dict
+   - Atleast 13 duplicate questions can be found on stackoverflow 
+   - This can be tracked on https://you.com/search?q=find%20key%20in%20nested%20dictionary%20python
+   
+
 | Someone made a nice comparision of this lib(trace-dkey) with one of the famous lib(yamlpath) which is doing the similar thing 
 
 .. image:: /images/img.png
