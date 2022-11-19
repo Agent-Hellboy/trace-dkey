@@ -17,7 +17,9 @@ def test_trace_fixture():
     fixture3 = trace(dict3, 'r')
     dict4 = {'a': {'b': {'c': {('d','e'): 1}}, 'c': 1}}
     fixture4 = trace(dict4, 'c')
-    return fixture1, fixture2, fixture3, fixture4
+    dict5={'a':'b','c':{'d':[{'e':'f'}]}}
+    fixture5 = trace(dict5,'e')
+    return fixture1, fixture2, fixture3, fixture4, fixture5
 
 
 def test_when_key_is_string(test_trace_fixture):
@@ -31,3 +33,6 @@ def test_when_key_is_not_present(test_trace_fixture):
 
 def test_when_multiple_keys_found(test_trace_fixture):
     assert test_trace_fixture[3] == [['a', 'b', 'c'], ['a', 'c']]
+
+def test_when_keys_found_in_list(test_trace_fixture):
+    assert test_trace_fixture[4] == [['c', 'd','e']]

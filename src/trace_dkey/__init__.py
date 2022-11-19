@@ -24,17 +24,23 @@ def __trace_key(dict_key: Any, dict_value: Any, key: Any, path: List[Union[str, 
         return []
 
     path.append(dict_key_value)
-
     if dict_key_value == key:
         paths = [path]
     else:
+        # branch to iterate over list of keys
         if (type(dict_value) == _ast.Dict and len(dict_value.keys) > 0):
             for i in range(len(dict_value.keys)):
                 # find array of paths inside the ith branch
                 branch_paths = __trace_key(dict_value.keys[i], dict_value.values[i], key, path)
-
                 paths = [*paths, *branch_paths]
-
+        
+        # branch to iterate over dict of list  
+        if (type(dict_value) == _ast.List):
+            for elt in dict_value.elts:
+                for i in range(len(elt.keys)):
+                    # find array of paths inside the ith branch
+                    branch_paths = __trace_key(elt.keys[i], elt.values[i], key, path)
+                    paths = [*paths, *branch_paths]
     return paths
 
 
