@@ -10,7 +10,7 @@ def read(fname):
 setup(
     name="trace-dkey",
     author="Prince Roshan",
-    version='0.0.3',
+    version='0.0.4',
     author_email="princekrroshan01@gmail.com",
     url="https://github.com/Agent-Hellboy/trace-dkey",
     description=("Python library to trace path of a particular key inside a nested dict"),
@@ -27,6 +27,7 @@ setup(
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
         "Operating System :: OS Independent",
     ],
     include_package_data=True,
