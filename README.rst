@@ -51,6 +51,9 @@ Example
    >>> l['a']['b']['c']['d']['e']['f']
    1
 
+   refer tests_ for other examples 
+   .. _tests: https://github.com/Agent-Hellboy/trace-dkey/tree/main/tests
+
 General Info
 ============
 
