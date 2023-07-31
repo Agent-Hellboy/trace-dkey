@@ -5,9 +5,7 @@ from typing import Tuple, List, Any, Dict, Union
 
 
 def __process_tuple(tuple_elts: List) -> Tuple:
-    ans = []
-    for elt in tuple_elts:
-        ans.append(elt.value)
+    ans = [elt.value for elt in tuple_elts]
     return tuple(ans)
 
 def __trace_key(dict_key: Any, dict_value: Any, key: Any, path: List[Union[str, Tuple]] = []) -> None:
