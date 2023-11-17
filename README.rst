@@ -39,6 +39,9 @@ For developement
 Example
 =======
 
+- you can use the library as `python3 -m trace_dkey --file=test.json --key=name`, test.json is 
+      a json file containing name as key 
+
 .. code:: py
 
    >>> from trace_dkey import trace
@@ -59,8 +62,7 @@ General Info
    - The value returned by the `trace` function is an array of paths, where each path is an array of dictionary keys.
    - Because of that, the library can be used in a practical way by taking advantage of this format.
    - In the example below we use the returned path to iterate over the dictionary keys and print the key value:
-   - you can use the library as `python3 -m trace_dkey --file=test.json --key=name`, test.json is 
-      a json file containing name as key 
+  
     .. code:: py
     
        from trace_dkey import trace
