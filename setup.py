@@ -21,7 +21,7 @@ setup(
     keywords=[
         "tracer","dict-key-path-finder"
     ],
-    install_requires=["click"]
+    install_requires=["click"],
     python_requires=">=3.7",
     classifiers=[
         "Programming Language :: Python :: 3.7",
