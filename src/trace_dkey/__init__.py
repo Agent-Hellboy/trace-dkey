@@ -3,7 +3,6 @@ import ast
 import copy
 from typing import Tuple, List, Any, Dict, Union
 
-
 def __process_tuple(tuple_elts: List) -> Tuple:
     ans = [elt.value for elt in tuple_elts]
     return tuple(ans)
@@ -45,7 +44,7 @@ def __trace_key(dict_key: Any, dict_value: Any, key: Any, path: List[Union[str, 
     return paths
 
 
-def trace(dictionary: Dict, key: Any) -> None:
+def _trace(dictionary: Dict, key: Any) -> List[List]:
     dict_expr = str(dictionary)
     ast_obj = ast.parse(dict_expr, mode="eval")
     paths = []
@@ -55,7 +54,12 @@ def trace(dictionary: Dict, key: Any) -> None:
         dict_value = ast_obj.body.values[indx]
 
         trace_res = __trace_key(dict_key, dict_value, key, [])
-
         paths = [*paths, *trace_res]
 
     return paths
+
+def trace(dictionary: Dict, key: Any):
+    paths = _trace(dictionary,key)
+
+    return paths
+
