@@ -39,8 +39,10 @@ For developement
 Example
 =======
 
+
 you can use the library as ``python3 -m trace_dkey --file=test.json --key=name``, test.json is 
-      a json file containing name as key
+
+a json file containing name as key
 
 .. code:: py
 
