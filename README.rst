@@ -61,27 +61,27 @@ refer `Tests_ <https://github.com/Agent-Hellboy/trace-dkey/tree/main/tests/>`_. 
 General Info
 ============
 
- - The value returned by the `trace` function is an array of paths, where each path is an array of dictionary keys.
- - Because of that, the library can be used in a practical way by taking advantage of this format.
- - In the example below we use the returned path to iterate over the dictionary keys and print the key value:
+- The value returned by the `trace` function is an array of paths, where each path is an array of dictionary keys.
+- Because of that, the library can be used in a practical way by taking advantage of this format.
+- In the example below we use the returned path to iterate over the dictionary keys and print the key value:
   
-    .. code:: py
-    
-       from trace_dkey import trace
-       l={'a':{'b':{'c':{'d':{'e':{'f':1}}}}}}
-    
-       paths = trace(l,'f')
+.. code:: py
+ 
+    from trace_dkey import trace
+    l={'a':{'b':{'c':{'d':{'e':{'f':1}}}}}}
+ 
+    paths = trace(l,'f')
 
-       for path in paths:
-          dic = l
-          for key in path:
-             dic = dic[key]
-          print(dic)
+    for path in paths:
+       dic = l
+       for key in path:
+          dic = dic[key]
+       print(dic)
 
 
- - This addresses a wide range of questions asked on StackOverflow about key inside a nested dict
- - At least 13 duplicate questions can be found on Stackoverflow 
- - This can be tracked on https://you.com/search?q=find%20key%20in%20nested%20dictionary%20python
+- This addresses a wide range of questions asked on StackOverflow about key inside a nested dict
+- At least 13 duplicate questions can be found on Stackoverflow 
+- This can be tracked on https://you.com/search?q=find%20key%20in%20nested%20dictionary%20python
    
 
 
