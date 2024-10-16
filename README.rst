@@ -30,7 +30,7 @@ Installation
 For stable version 
    - pip install trace-dkey
 
-For developement 
+For development 
    - git clone https://github.com/Agent-Hellboy/trace-dkey
    - cd trace-dkey 
    - python -m venv .venv 
@@ -42,7 +42,7 @@ Example
 
 you can use the library as ``python3 -m trace_dkey --file=test.json --key=name``, test.json is 
 
-a json file containing name as key
+A JSON file containing name as key
 
 .. code:: py
 
@@ -61,9 +61,9 @@ refer `Tests_ <https://github.com/Agent-Hellboy/trace-dkey/tree/main/tests/>`_. 
 General Info
 ============
 
-   - The value returned by the `trace` function is an array of paths, where each path is an array of dictionary keys.
-   - Because of that, the library can be used in a practical way by taking advantage of this format.
-   - In the example below we use the returned path to iterate over the dictionary keys and print the key value:
+ - The value returned by the `trace` function is an array of paths, where each path is an array of dictionary keys.
+ - Because of that, the library can be used in a practical way by taking advantage of this format.
+ - In the example below we use the returned path to iterate over the dictionary keys and print the key value:
   
     .. code:: py
     
@@ -79,9 +79,9 @@ General Info
           print(dic)
 
 
-   - This is addressing a wide range of question asked on stackoverflow about key inside a nested dict
-   - Atleast 13 duplicate questions can be found on stackoverflow 
-   - This can be tracked on https://you.com/search?q=find%20key%20in%20nested%20dictionary%20python
+ - This addresses a wide range of questions asked on StackOverflow about key inside a nested dict
+ - At least 13 duplicate questions can be found on Stackoverflow 
+ - This can be tracked on https://you.com/search?q=find%20key%20in%20nested%20dictionary%20python
    
 
 
