@@ -6,7 +6,6 @@ theme:
     accent: deep orange
 nav:
   - Home: index.md
-  - Usage: usage.md
 repo_url: https://github.com/Agent-Hellboy/trace-dkey
 markdown_extensions:
   - pymdownx.highlight:
