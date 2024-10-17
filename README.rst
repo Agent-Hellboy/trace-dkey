@@ -56,7 +56,10 @@ A JSON file containing name as key
    >>> l['a']['b']['c']['d']['e']['f']
    1
 
-refer `Tests_ <https://github.com/Agent-Hellboy/trace-dkey/tree/main/tests/>`_. for other examples
+Documentation
+=============
+
+For more details, you can refer to the `documentation <https://agent-hellboy.github.io/trace-dkey/>`_.
 
 General Info
 ============
