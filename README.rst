@@ -36,26 +36,6 @@ For development
    - python -m venv .venv 
    - source .venv/bin/activate
 
-Example
-=======
-
-
-you can use the library as ``python3 -m trace_dkey --file=test.json --key=name``, test.json is 
-
-A JSON file containing name as key
-
-.. code:: py
-
-   >>> from trace_dkey import trace
-   >>> l={'a':{'b':{'c':{'d':{'e':{'f':1}}}}}}
-   >>> print(trace(l,'f'))
-   [['a', 'b', 'c', 'd', 'e', 'f']]
-
-   Now you can query it as l['a']['b']['c']['d']['e']['f']
-
-   >>> l['a']['b']['c']['d']['e']['f']
-   1
-
 Documentation
 =============
 
