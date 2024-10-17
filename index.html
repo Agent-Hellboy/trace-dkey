@@ -10,8 +10,6 @@
       
       
       
-        <link rel="next" href="usage/">
-      
       <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
     
@@ -250,6 +248,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#as-a-command-line-tool" class="md-nav__link">
+    As a Command-Line Tool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as-a-python-library" class="md-nav__link">
+    As a Python Library
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -266,7 +291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="usage/" class="md-nav__link">
+      <a href="usage.md" class="md-nav__link">
         Usage
       </a>
     </li>
@@ -306,6 +331,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#as-a-command-line-tool" class="md-nav__link">
+    As a Command-Line Tool
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#as-a-python-library" class="md-nav__link">
+    As a Python Library
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -329,6 +381,19 @@
 <h2 id="installation">Installation</h2>
 <p>You can install Trace DKey using pip:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>trace-dkey
+</code></pre></div>
+<h2 id="usage">Usage</h2>
+<h3 id="as-a-command-line-tool">As a Command-Line Tool</h3>
+<p>You can use trace-dkey as a command-line tool:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python<span class="w"> </span>-m<span class="w"> </span>trace_dkey<span class="w"> </span>--file<span class="o">=</span>test.json<span class="w"> </span>--key<span class="o">=</span>name
+</code></pre></div>
+<h3 id="as-a-python-library">As a Python Library</h3>
+<p>You can use trace-dkey in your Python code as follows:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span> <span class="nn">trace_dkey</span> <span class="kn">import</span> <span class="n">trace</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;d&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;e&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;f&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}}}}}}</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">path</span> <span class="o">=</span> <span class="n">trace</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="s1">&#39;f&#39;</span><span class="p">)</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>   <span class="c1"># Output: [[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;]]</span>
 </code></pre></div>
 
 
