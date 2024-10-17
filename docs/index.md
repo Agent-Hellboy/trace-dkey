@@ -4,7 +4,7 @@ trace-dkey is a simple tool for tracing keys in nested dictionaries.
 
 ## Installation
 
-You can install Trace DKey using pip:
+You can install trace-dkey using pip:
 
 
 ```bash
