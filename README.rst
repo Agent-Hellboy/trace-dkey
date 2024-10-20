@@ -88,9 +88,9 @@ API Examples
 
 Added example scripts demonstrating how to use trace-dkey with responses from popular APIs. These examples can be found in the `examples` folder:
 
-1. GitHub API Example (`github_api_example.py`)
-2. OpenWeatherMap API Example (`openweathermap_api_example.py`)
-3. JSONPlaceholder API Example (`jsonplaceholder_api_example.py`)
+1. GitHub API Example (`github_api_example.py`): Demonstrates fetching repository information
+2. OpenWeatherMap API Example (`openweathermap_api_example.py`): Retrieves current weather data
+3. JSONPlaceholder API Example (`jsonplaceholder_api_example.py`): Shows how to interact with a mock REST API
 
 To run these examples:
 
