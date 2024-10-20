@@ -107,7 +107,7 @@ To run these examples:
 
 These examples demonstrate how to use trace-dkey to find specific keys in nested JSON responses from real-world APIs.
 
-| Someone made a nice comparision of this lib(trace-dkey) with one of the famous lib(yamlpath) which is doing the similar thing
+| Someone made a nice comparison of this lib(trace-dkey) with one of the famous lib(yamlpath) which is doing the similar thing
 
 .. image:: /images/img.png
    :width: 600
