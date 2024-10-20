@@ -36,27 +36,11 @@ For development
    - python -m venv .venv
    - source .venv/bin/activate
 
-Example
-=======
+Documentation
+=============
 
+For more details, you can refer to the `documentation <https://agent-hellboy.github.io/trace-dkey/>`_.
 
-you can use the library as ``python3 -m trace_dkey --file=test.json --key=name``, test.json is
-
-A JSON file containing name as key
-
-.. code:: py
-
-   >>> from trace_dkey import trace
-   >>> l={'a':{'b':{'c':{'d':{'e':{'f':1}}}}}}
-   >>> print(trace(l,'f'))
-   [['a', 'b', 'c', 'd', 'e', 'f']]
-
-   Now you can query it as l['a']['b']['c']['d']['e']['f']
-
-   >>> l['a']['b']['c']['d']['e']['f']
-   1
-
-refer `Tests_ <https://github.com/Agent-Hellboy/trace-dkey/tree/main/tests/>`_. for other examples
 
 General Info
 ============

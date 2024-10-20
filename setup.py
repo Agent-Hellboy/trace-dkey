@@ -10,7 +10,7 @@ def read(fname):
 setup(
     name="trace-dkey",
     author="Prince Roshan",
-    version='0.0.7',
+    version='0.0.8',
     author_email="princekrroshan01@gmail.com",
     url="https://github.com/Agent-Hellboy/trace-dkey",
     description=("Python library to trace path of a particular key inside a nested dict"),
@@ -32,4 +32,13 @@ setup(
         "Operating System :: OS Independent",
     ],
     include_package_data=True,
+    entry_points={
+        'console_scripts': [
+            'trace-dkey=trace_dkey.cli:main',
+        ],
+    },
+    package_data={
+        'trace_dkey': ['images/*', 'README.rst'],
+    },
 )
+
